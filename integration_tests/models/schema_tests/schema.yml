@@ -72,7 +72,9 @@ models:
               from: id
               to: ref('data_test_relationships_where_table_1')
               field: id
-              from_condition: id <> 4
+              # Context
+              # https://stackoverflow.com/a/13740785/3842610
+              from_condition: id != 4
 
   - name: data_test_mutually_exclusive_ranges_no_gaps
     tests:

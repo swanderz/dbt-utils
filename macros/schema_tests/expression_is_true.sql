@@ -1,8 +1,8 @@
-{% macro test_expression_is_true(model, condition='true') %}
+{% macro test_expression_is_true(model, condition='1=1') %}
   {{ return(adapter.dispatch('test_expression_is_true', packages = dbt_utils._get_utils_namespaces())(model, condition, **kwargs)) }}
 {% endmacro %}
 
-{% macro default__test_expression_is_true(model, condition='true') %}
+{% macro default__test_expression_is_true(model, condition) %}
 
 {% set expression = kwargs.get('expression', kwargs.get('arg')) %}
 

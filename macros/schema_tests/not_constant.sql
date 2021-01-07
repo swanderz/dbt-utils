@@ -12,7 +12,7 @@ select count(*)
 from (
 
     select
-          count(distinct {{ column_name }}) as filler_column
+          count(distinct {{ column_name }})
 
     from {{ model }}
 

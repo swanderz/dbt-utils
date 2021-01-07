@@ -9,7 +9,6 @@
 select count(*)
 from (
     select
-  
       count({{ column_name }})
 
     from {{ model }}

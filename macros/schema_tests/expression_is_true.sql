@@ -2,7 +2,7 @@
   {{ return(adapter.dispatch('test_expression_is_true', packages = dbt_utils._get_utils_namespaces())(model, condition, **kwargs)) }}
 {% endmacro %}
 
-{% macro default__test_expression_is_true(model, condition) %}
+{% macro default__test_expression_is_true(model, condition='true') %}
 
 {% set expression = kwargs.get('expression', kwargs.get('arg')) %}
 

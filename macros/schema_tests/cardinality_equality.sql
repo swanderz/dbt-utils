@@ -13,7 +13,7 @@ select
   {{ column_name }},
   count(*) as num_rows
 from {{ model }}
-group by {{ column_name }}
+group by 1
 ),
 
 table_b as (
@@ -21,7 +21,7 @@ select
   {{ field }},
   count(*) as num_rows
 from {{ to }}
-group by {{ column_name }}
+group by 1
 ),
 
 except_a as (
